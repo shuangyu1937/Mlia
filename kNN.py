@@ -3,8 +3,8 @@ import operator
 
 
 def createDataSet():
-    group = array([[1.0, 1.1], [1.0, 1.0], [0, 0], [0, 0.1]])
-    labels = ['A', 'A', 'B', 'B']
+    group = array([[1.0, 1.1], [1.0, 1.0],[0.5, 0.5],[0.6, 0.6], [0, 0], [0, 0.1]])
+    labels = ['A', 'A', 'B', 'B' ,'C', 'C']
     return group, labels
 
 
@@ -25,4 +25,4 @@ def classify0(inX, dataSet, labels, k):
     return sortedClassCount[0][0]
 
 group, labels = createDataSet()
-print classify0([1, 1.1], group, labels, 3)
+print classify0([0.1, 0.4], group, labels, 3)
